@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="content-language" content="ru-RU">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+        <title>День открытых дверей в Minecraft - Костанайский Строительный Колледж</title>
+        <meta property="og:title" content="День открытых дверей в Minecraft - Костанайский Строительный Колледж">
+        <meta property="og:url" content="https://minecraft.strcol.kz">
+        <meta name="description" content="Костанайский Строительный Колледж проводит день открытых дверей в игре Minecraft. К участию в мероприятии приглашаются учащиеся 8-9 классов школ города Костаная. Успей подать заявку до 28 января!">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" integrity="sha384-h0HFp1r+Vq/1x7modzqZaqvMelro9pikGIVdLDs045XCE8IfHpIQDcGPiBNslfXT" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Design by @kaletise -->
+        <header class="header">
+            <div class="header-container not-selectable">
+                <img src="images/ksk.svg">
+                <hr class="header-splitter">
+                <span class="header-title">Костанайский строительный<br>колледж</span>
+            </div>
+        </header>
+        <div class="wrapper">
+            <section class="header-background">
+                <div class="navbar-place"></div>
+                <div class="section-container" id="main-content">
+                    <div id="window-apply" class="row">
+                        <div class="col-md-6 centerize">
+                            <div class="title">
+                                День открытых дверей в Minecraft
+                            </div><br>
+                            <div class="description">
+                                Костанайский строительный колледж проводит День открытых дверей в игре Minecraft<br>
+                                К участию в мероприятии приглашаются учащиеся 9 классов школ города Костаная<br><br>
+                                Ты побываешь в цифровой копии колледжа, где для тебя проведут экскурсию и ознакомят со специальностями<br><br>
+                                Прием заявок ведется до 23 января 2021 года включительно<br>
+                                Мероприятие состоится 28 января 2021 года в 13:00<br><br>
+                                Успей зарегистрироваться!<br><br>
+                                <div class="timer-title">До конца приема заявок осталось:</div>
+                                <div class="timer" id="timer"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 centerize">
+                            <div class="title" id="divider">
+                                Подать заявку
+                            </div><br>
+                            <select onchange="validate();" id="school">
+                                <option value="0">Выбери твою школу</option>
+                                <option value="Средняя школа №1">Средняя школа №1</option>
+                                <option value="Средняя школа №2">Средняя школа №2</option>
+                                <option value="Средняя школа №3">Средняя школа №3</option>
+                                <option value="Средняя школа №4">Средняя школа №4</option>
+                                <option value="Средняя школа №5">Средняя школа №5</option>
+                                <option value="Средняя школа №6">Средняя школа №6</option>
+                                <option value="Средняя школа №7">Средняя школа №7</option>
+                                <option value="Средняя школа №8">Средняя школа №8</option>
+                                <option value="Средняя школа №9">Средняя школа №9</option>
+                                <option value="Средняя школа №10">Средняя школа №10</option>
+                                <option value="Средняя школа №11">Средняя школа №11</option>
+                                <option value="Гимназия им. Горького">Гимназия им. Горького</option>
+                                <option value="Средняя школа №13">Средняя школа №13</option>
+                                <option value="Средняя школа №14">Средняя школа №14</option>
+                                <option value="Средняя школа №15">Средняя школа №15</option>
+                                <option value="Средняя школа №16">Средняя школа №16</option>
+                                <option value="Средняя школа №17">Средняя школа №17</option>
+                                <option value="Средняя школа №18">Средняя школа №18</option>
+                                <option value="Средняя школа №19">Средняя школа №19</option>
+                                <option value="Средняя школа №20">Средняя школа №20</option>
+                                <option value="Средняя школа №21">Средняя школа №21</option>
+                                <option value="Средняя школа №22">Средняя школа №22</option>
+                                <option value="Средняя школа №23">Средняя школа №23</option>
+                                <option value="Гимназия им. Мауленова">Гимназия им. Мауленова</option>
+                                <option value="Средняя школа №25">Средняя школа №25</option>
+                                <option value="Физико-Математический Лицей">Физико-Математический Лицей</option>
+                                <option value="Средняя школа №30">Средняя школа №30</option>
+                                <option value="Средняя школа №115">Средняя школа №115</option>
+                                <option value="Средняя школа №122">Средняя школа №122</option>
+                                <option value="Дружбинская средняя школа">Дружбинская средняя школа</option>
+                                <option value="УМЦ НВП">УМЦ НВП</option>
+                                <option value="Вечерняя школа №1">Вечерняя школа №1</option>
+                                <option value="Другое">Другое</option>
+                            </select><br>
+                            <input placeholder="ФИО" maxlength="64" oninput="validate();" id="fullname"><br>
+                            <input placeholder="Твой номер телефона" onkeypress="return /[0-9+]/i.test(event.key)" type="phone" maxlength="16" oninput="validate();" id="phone"><br>
+                            <input placeholder="Твой email" type="email" maxlength="64" oninput="validate();" id="email"><br>
+                            <input placeholder="Твой класс (обязательно с буквой)" maxlength="16" oninput="validate();" id="class"><br>
+                            <input placeholder="Твой ник в игре" onkeypress="return /[0-9a-z_-]/i.test(event.key)" maxlength="16" oninput="validate();" id="nickname"><br>
+                            <span class="small-text">Все поля обязательны для заполнения<br>При предоставлении заведомо ложных данных в регистрации будет отказано<br>Нажимая "Подать заявку", ты даешь свое согласие на обработку и хранение персональных данных</span><br>
+                            <button class="button button-header not-selectable" id="apply" onclick="submit();" disabled>Подать заявку</button><br>
+                            <div id="divider-end"></div>
+                        </div>
+                    </div>
+                    <div id="window-success" class="centerize" style="display: none;">
+                        <i class="las la-check-circle minecraft-green not-selectable"></i><br><br>
+                        <h3>Заявка отправлена</h3>
+                        Заявка на участие в мероприятии отправлена!<br>
+                        Проверь свой email для получения дальнейших инструкций<br>
+                        Ждем тебя на мероприятии!
+                        <div id="divider-end"></div>
+                    </div>
+                    <div id="window-fail" class="centerize" style="display: none;">
+                        <i class="las la-exclamation-circle minecraft-red not-selectable"></i><br><br>
+                        <h3>Заявка не отправлена</h3>
+                        Не удалось отправить заявку<br>
+                        Пожалуйста, попробуй позже
+                        <div id="divider-end"></div>
+                    </div>
+                    <div id="window-fail-exists" class="centerize" style="display: none;">
+                        <i class="las la-exclamation-circle minecraft-red not-selectable"></i><br><br>
+                        <h3>Заявка не отправлена</h3>
+                        Игрок с таким ником или email уже зарегистрирован<br>
+                        Пожалуйста, попробуй использовать другой ник
+                        <div id="divider-end"></div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer social-media not-selectable">
+                <a href="https://strcol.kz" class="href-visible"><i class="las la-globe"></i></a>
+                <a href="https://vk.com/kostack" class="href-visible"><i class="lab la-vk"></i></a>
+                <a href="https://instagram.com/stroy_college" class="href-visible"><i class="lab la-instagram"></i></a>
+                <a href="https://facebook.com/stroycollege" class="href-visible"><i class="lab la-facebook"></i></a>
+                <a href="https://github.com/strcol" class="href-visible"><i class="lab la-github"></i></a>
+            </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+        <script src="js/modernizr.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

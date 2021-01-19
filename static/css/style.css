@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'minecraft';
+    src: url('../fonts/minecraft.eot');
+    src: url('../fonts/minecraft.woff') format('woff'), url('../fonts/minecraft.ttf') format('truetype');
+    font-display: swap;
+}
+
+html, body {
+    height: 100%;
+}
+
+a {
+    color: #ffffff !important;
+}
+
+body {
+    font-family: 'minecraft';
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.48);
+    color: #ffffff;
+}
+
+section {
+    width: 100%;
+}
+
+select {
+    width: 75%;
+    margin: 5px;
+    padding-left: 10px;
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    height: 45px;
+}
+
+select option {
+    color: #000000;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+input::placeholder {
+    color: #aaaaaa;
+}
+
+input {
+    width: 75%;
+    margin: 5px;
+    padding-left: 10px;
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    height: 45px;
+}
+
+.small-text {
+    text-align: left;
+    font-size: 11px;
+}
+
+.la-check-circle, .la-exclamation-circle {
+    font-size: 144px;
+}
+
+.minecraft-green {
+    color: rgb(0, 170, 0);
+}
+
+.minecraft-red {
+    color: rgb(170, 0, 0);
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100%;
+    height: auto;
+}
+
+.footer {
+    position: absolute;
+    padding: 25px;
+    width: 100%;
+    text-align: right;
+}
+
+.not-selectable {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.social-media {
+    font-size: 40px;
+    z-index: 9999;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.description {
+    text-align: left;
+}
+
+.timer {
+    font-size: 36px;
+    text-align: center;
+}
+
+.timer-title {
+    text-align: center;
+}
+
+.small-link {
+    font-size: 14px;
+    color: rgb(78, 125, 223) !important;
+}
+
+.small-link:hover {
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+
+.centerize {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.href-visible:hover {
+    color: #cccccc !important;
+}
+
+.header-splitter {
+    height: 10px;
+    visibility: hidden;
+    margin: 0;
+}
+
+.no-webp .header-background {
+    background-color: #000000;
+    background-image: url('../images/png/background.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.webp .header-background {
+    background-color: #000000;
+    background-image: url('../images/webp/background.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.section-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.welcome-section {
+    text-align: center;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    text-align: center;
+}
+
+.header-container {
+    margin-top: 20px;
+}
+
+.header-title {
+    margin-bottom: 10px;
+}
+
+.navbar-place {
+    height: 90px;
+}
+
+.button {
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.button-header {
+    padding: 15px 15px;
+    font-size: 20px;
+    color: #ffffff;
+    box-shadow: inset 0 -4px rgba(0, 0, 0, .2), inset 0 4px hsla(0, 0%, 100%, .3), inset -4px 0 hsla(0, 0%, 100%, .3), inset 4px 0 rgba(0, 0, 0, .2);
+    text-align: center;
+    background: rgb(78, 125, 223);
+    transition: 0.4s;
+}
+
+.button-header:hover {
+    background: rgb(34, 84, 188);
+    transition: 0.4s;
+    transform: scale(1.05);
+}
+
+.button-header:disabled {
+    background: #666666;
+}
+
+#divider-end {
+    display: none;
+    padding-top: 120px;
+}
+
+@media (max-width: 766px) {
+    #main-content {
+        padding-top: 200px;
+    }
+
+    #divider {
+        padding-top: 40px;
+    }
+
+    #divider-end {
+        display: block;
+    }
+
+    select {
+        width: 90%;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .footer {
+        align-self: flex-end !important;
+    }
+}
+
+@media (max-height: 800px) {
+    #main-content {
+        padding-top: 200px;
+    }
+
+    select {
+        width: 90%;
+    }
+
+    input {
+        width: 90%;
+    }
+}
