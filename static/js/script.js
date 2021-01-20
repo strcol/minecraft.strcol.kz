@@ -1,7 +1,16 @@
 var countDownDate = new Date('Jan 24, 2021 00:00:00').getTime();
 
 function validate() {
-    let validated = document.getElementById('nickname').value.length >= 3 && document.getElementById('fullname').value.length >= 6 && document.getElementById('email').value.length >= 6 && document.getElementById('phone').value.length >= 10 && document.getElementById('class').value.length > 1 && document.getElementById('school').value != '0' && document.getElementById('fullname').value.trim().indexOf(' ') >= 0;
+    let validated = document.getElementById('nickname').value.length >= 3 && document.getElementById('fullname').value.length >= 6 && document.getElementById('email').value.length >= 6 && document.getElementById('phone').value.length >= 10 && document.getElementById('class').value.length >= 1 && document.getElementById('school').value != '0' && document.getElementById('fullname').value.trim().indexOf(' ') >= 0;
+    let nickname = document.getElementById('nickname').value;
+    if (/[^0-9a-z_-]/.test(nickname)) {
+        document.getElementById('nickname-format-error').style.display = 'block';
+        document.getElementById('nickname').classList.add('error-input');
+        validated = false;
+    } else {
+        document.getElementById('nickname-format-error').style.display = 'none';
+        document.getElementById('nickname').classList.remove('error-input');
+    }
     document.getElementById('apply').disabled = !validated && (countDownDate - (new Date).getTime()) > 0;
 }
 

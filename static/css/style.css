@@ -40,6 +40,10 @@ select option {
     font-family: Arial, sans-serif;
 }
 
+*:focus {
+    outline: none;
+}
+
 input::placeholder {
     color: #aaaaaa;
 }
@@ -55,9 +59,17 @@ input {
     height: 45px;
 }
 
+.error-input {
+    border: 2px solid #ff9494 !important;
+}
+
 .small-text {
-    text-align: left;
     font-size: 11px;
+}
+
+.error-text {
+    font-size: 12px;
+    color: #ff9494;
 }
 
 .la-check-circle, .la-exclamation-circle {

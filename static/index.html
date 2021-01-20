@@ -35,8 +35,7 @@
                                 Костанайский строительный колледж проводит День открытых дверей в игре Minecraft<br>
                                 К участию в мероприятии приглашаются учащиеся 9 классов школ города Костаная<br><br>
                                 Ты побываешь в цифровой копии колледжа, где для тебя проведут экскурсию и ознакомят со специальностями<br><br>
-                                Прием заявок ведется до 23 января 2021 года включительно<br>
-                                Мероприятие состоится 28 января 2021 года в 13:00<br><br>
+                                Прием заявок ведется до 23 января 2021 года включительно<br><br>
                                 Успей зарегистрироваться!<br><br>
                                 <div class="timer-title">До конца приема заявок осталось:</div>
                                 <div class="timer" id="timer"></div>
@@ -87,6 +86,7 @@
                             <input placeholder="Твой email" type="email" maxlength="64" oninput="validate();" id="email"><br>
                             <input placeholder="Твой класс (обязательно с буквой)" maxlength="16" oninput="validate();" id="class"><br>
                             <input placeholder="Твой ник в игре" onkeypress="return /[0-9a-z_-]/i.test(event.key)" maxlength="16" oninput="validate();" id="nickname"><br>
+                            <span class="error-text" id="nickname-format-error" style="display: none;">Ник может содержать только латинские буквы,<br>цифры и символы _ и -</span>
                             <span class="small-text">Все поля обязательны для заполнения<br>При предоставлении заведомо ложных данных в регистрации будет отказано<br>Нажимая "Подать заявку", ты даешь свое согласие на обработку и хранение персональных данных</span><br>
                             <button class="button button-header not-selectable" id="apply" onclick="submit();" disabled>Подать заявку</button><br>
                             <div id="divider-end"></div>
