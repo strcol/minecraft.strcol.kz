@@ -1,9 +1,14 @@
-var countDownDate = new Date('Jan 24, 2021 00:00:00').getTime();
+var countDownDate = new Date('Jan 27, 2021 00:00:00').getTime();
+var ended = false;
 
 function validate() {
+    if (ended) {
+        document.getElementById('apply').disabled = true;
+        return;
+    }
     let validated = document.getElementById('nickname').value.length >= 3 && document.getElementById('fullname').value.length >= 6 && document.getElementById('email').value.length >= 6 && document.getElementById('phone').value.length >= 10 && document.getElementById('class').value.length >= 1 && document.getElementById('school').value != '0' && document.getElementById('fullname').value.trim().indexOf(' ') >= 0;
     let nickname = document.getElementById('nickname').value;
-    if (/[^0-9a-z_-]/.test(nickname)) {
+    if (/[^0-9a-zA-Z_-]/.test(nickname)) {
         document.getElementById('nickname-format-error').style.display = 'block';
         document.getElementById('nickname').classList.add('error-input');
         validated = false;
@@ -11,7 +16,7 @@ function validate() {
         document.getElementById('nickname-format-error').style.display = 'none';
         document.getElementById('nickname').classList.remove('error-input');
     }
-    document.getElementById('apply').disabled = !validated && (countDownDate - (new Date).getTime()) > 0;
+    document.getElementById('apply').disabled = !validated;
 }
 
 function getCase(days) {
@@ -45,6 +50,7 @@ function update() {
     if (t < 0) {
         document.getElementById('timer').innerHTML = '0 дней 00 : 00 : 00';
         document.getElementById('apply').disabled = true;
+        ended = true;
     }
 }
 
@@ -60,6 +66,7 @@ function submit() {
             document.getElementById('window-fail-exists').style.display = 'block';
         } else {
             document.getElementById('window-fail').style.display = 'block';
+            document.getElementById('error-code').innerHTML = data.status;
         }
     }).fail(function(xhr, status, error) {
         document.getElementById('window-apply').style.display = 'none';

@@ -67,6 +67,10 @@ def main():
         header['Access-Control-Allow-Origin'] = '*'
         return response
 
+    @app.route('/logo.png', methods=['GET'])
+    def logo():
+        return flask.send_file('static/logo.png')
+
     @app.route('/submit', methods=['POST'])
     def submit_handler():
         try:
@@ -80,10 +84,10 @@ def main():
                     len(data['fullname']) > 64 or \
                     len(data['school']) > 32 or len(data['class']) > 16 or \
                     len(data['phone']) > 16 or len(data['email']) > 64:
-                return json.dumps({'status': 0})
+                return json.dumps({'status': -1})
             if ip in last_submit and last_submit[ip] > current_time:
                 last_submit[ip] += 10000
-                return json.dumps({'status': 0})
+                return json.dumps({'status': -2})
             database = get_database()
             cursor = database.cursor()
             if cursor.execute(
@@ -132,7 +136,7 @@ def main():
             return json.dumps({'status': 1})
         except Exception:
             traceback.print_exc()
-            return json.dumps({'status': 0})
+            return json.dumps({'status': -3})
 
     gevent.pywsgi.WSGIServer(
         ('0.0.0.0', 443), app,
